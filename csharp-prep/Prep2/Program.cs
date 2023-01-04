@@ -38,7 +38,7 @@ class Program
         }
         else 
         {
-            Console.WriteLine("You didn't pass the class. You can do it better.");
+            Console.WriteLine("You didn't pass the class. You can do better.");
         }
     }
 }
