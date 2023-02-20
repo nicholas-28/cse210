@@ -5,15 +5,9 @@ using System.Text;
 public class Journal
 {
     public string JournalFile = "";
-    public void Run()
-    {
-        CreateJournalFile();
-        DisplayJournalContents();
-        ClearFile();
 
-    }
 
-    private void CreateJournalFile()
+    public void CreateJournalFile()
     {
         if (!File.Exists(JournalFile))
         {
@@ -21,18 +15,18 @@ public class Journal
         }
     }
 
-    private void DisplayJournalContents()
+    public void DisplayJournalContents()
     {
         string journalText = File.ReadAllText(JournalFile);
         Console.WriteLine(journalText);
     }
 
-    private void ClearFile()
+    public void ClearFile()
     {
         File.WriteAllText(JournalFile, "");
     }
 
-    private void AddEntry()
+    public void AddEntry()
     {
         string newLine = Console.ReadLine();
         File.AppendAllText(JournalFile, newLine); 

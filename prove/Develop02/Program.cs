@@ -5,6 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {   
+        DateTime theCurrentTime = DateTime.Now;
+        string dateText = theCurrentTime.ToShortDateString();
         Console.WriteLine("Welcome to the Journal Program!");
 
         int choice = 0;
