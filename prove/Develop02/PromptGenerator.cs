@@ -15,7 +15,7 @@ public class PromptGenerator
     {
         var random = new Random();
         var list = new List<string>{ "What is your favorite part of the day?","What do you remember about this day the most?","Who or what inspired you today?","What is the most difficult thing you faced today?", "What would you like to do more often?"};
-        int index = random.Next(list.Count);
+        int index = random.Next(prompts.Count);
         Console.WriteLine(list[index]);
     }
 
