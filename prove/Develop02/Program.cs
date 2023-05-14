@@ -41,6 +41,7 @@ class Program
 
                 case 4:
                     //SaveEntries
+                    journal.SaveToFile();
                     break;
 
                 case 5:
