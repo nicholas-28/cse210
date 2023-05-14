@@ -29,7 +29,15 @@ public class Journal
     
     public void DisplayEntries()
     {
-        foreach( Entry entry in Entries)
-        entry.Display();
+        if(Entries.Count == 0)
+        {
+            Console.WriteLine("No entries to display.");
+        }
+        else
+        {
+            foreach( Entry entry in Entries)
+            entry.Display();
+        }
+
     }
 }
