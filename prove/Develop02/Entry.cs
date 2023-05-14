@@ -13,5 +13,11 @@ public class Entry
         _response = response;
         _date = date;
     }
+    public void Display()
+    {
+        Console.WriteLine($"Date: {_date} - Prompt: {_prompt}");
+        Console.WriteLine(_response);
+    }
+
 
 }

@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {   Journal journal = new Journal();
-        
+
         
         Console.WriteLine("Welcome to the Journal Program!");
 
@@ -32,6 +32,7 @@ class Program
                 
                 case 2:
                     //DisplayEntries
+                    journal.DisplayEntries();
                     break;
 
                 case 3:

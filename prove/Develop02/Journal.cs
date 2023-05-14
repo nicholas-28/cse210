@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class Journal
 {   PromptGenerator promptGenerator = new PromptGenerator();
-    
+
     
 
     public List<Entry> Entries = new List<Entry>();
@@ -27,4 +27,9 @@ public class Journal
 
     }
     
+    public void DisplayEntries()
+    {
+        foreach( Entry entry in Entries)
+        entry.Display();
+    }
 }
