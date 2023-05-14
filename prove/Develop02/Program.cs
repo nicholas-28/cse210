@@ -5,12 +5,13 @@ class Program
 {
     static void Main(string[] args)
     {   
-        DateTime theCurrentTime = DateTime.Now;
-        string dateText = theCurrentTime.ToShortDateString();
+
+        PromptGenerator prompt = new PromptGenerator();
+
         Console.WriteLine("Welcome to the Journal Program!");
 
-        int choice = 0;
-        while (choice != 5)
+        bool quit = false;
+        while (!quit)
         {
             Console.WriteLine("Please select one of the following choices: ");
             Console.WriteLine("1. Write");
@@ -19,14 +20,39 @@ class Program
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
             Console.Write("What would you like to do? ");
-            choice = int.Parse(Console.ReadLine()); 
+            
+            int input = int.Parse(Console.ReadLine()); 
 
-            if (choice == 1)
+            switch (input)
             {
-                PromptGenerator prompt = new PromptGenerator();
-                prompt.DisplayPrompt();
-                Console.Write("> ");
-                string answer = Console.ReadLine();
+                case 1:
+                    prompt.DisplayPrompt();
+                    Console.Write("> ");
+                    string response = Console.ReadLine();
+                    break;
+                
+                case 2:
+                //DisplayEntries
+                break;
+
+                case 3:
+                //LoadEntries
+                break;
+
+                case 4:
+                //SaveEntries
+                break;
+
+                case 5:
+
+                quit = true;
+                break;
+
+                default:
+                Console.WriteLine("Invalid input. Please try again.");
+                break;
+
+
             }
 
 
