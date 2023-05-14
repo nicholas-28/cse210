@@ -4,10 +4,9 @@ using System.Text;
 class Program
 {
     static void Main(string[] args)
-    {   
-
-        PromptGenerator prompt = new PromptGenerator();
-
+    {   Journal journal = new Journal();
+        
+        
         Console.WriteLine("Welcome to the Journal Program!");
 
         bool quit = false;
@@ -26,31 +25,31 @@ class Program
             switch (input)
             {
                 case 1:
-                    prompt.DisplayPrompt();
-                    Console.Write("> ");
-                    string response = Console.ReadLine();
+                    //WriteEntry
+                    journal.WriteEntry();
+
                     break;
                 
                 case 2:
-                //DisplayEntries
-                break;
+                    //DisplayEntries
+                    break;
 
                 case 3:
-                //LoadEntries
-                break;
+                    //LoadEntries
+                    break;
 
                 case 4:
-                //SaveEntries
-                break;
+                    //SaveEntries
+                    break;
 
                 case 5:
 
-                quit = true;
-                break;
+                    quit = true;
+                    break;
 
                 default:
-                Console.WriteLine("Invalid input. Please try again.");
-                break;
+                    Console.WriteLine("Invalid input. Please try again.");
+                    break;
 
 
             }
