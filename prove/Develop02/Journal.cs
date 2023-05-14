@@ -40,4 +40,22 @@ public class Journal
         }
 
     }
+
+    public void SaveToFile()
+    {
+        Console.WriteLine("What is the filename?");
+        string fileName = Console.ReadLine();
+
+        using (StreamWriter sw = new StreamWriter(fileName))
+        {
+            foreach(Entry entry in Entries)
+            {
+                sw.WriteLine($"Date: {entry._date} - Prompt: {entry._prompt} {entry._response}");
+            }
+        }
+    Console.WriteLine($"Journal saved to file named: {fileName}");
+
+    }
+
+    publ
 }
