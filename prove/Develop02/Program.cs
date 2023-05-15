@@ -37,6 +37,7 @@ class Program
 
                 case 3:
                     //LoadEntries
+                    journal.LoadFromFile();
                     break;
 
                 case 4:

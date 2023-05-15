@@ -50,12 +50,39 @@ public class Journal
         {
             foreach(Entry entry in Entries)
             {
-                sw.WriteLine($"Date: {entry._date} - Prompt: {entry._prompt} {entry._response}");
+                sw.WriteLine($"{entry._date}~~{entry._prompt}~~{entry._response}");
             }
         }
     Console.WriteLine($"Journal saved to file named: {fileName}");
 
     }
 
-    publ
+    public void LoadFromFile(){
+
+        Console.WriteLine("What is a filename?");
+        string fileName = Console.ReadLine();
+
+        List<Entry> entries = new List<Entry>();
+
+        using (StreamReader sr = new StreamReader(fileName))
+        {
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+
+                string[] parts = line.Split(new string[] { "~~" }, StringSplitOptions.None);
+                string date = parts[0];
+                string prompt = parts[1];
+                string response = parts[2];
+
+                Entry entry = new Entry(prompt, response, date);
+                entries.Add(entry);
+
+                Console.WriteLine($"Date: {date} - Prompt: {prompt} - Response: {response}");
+            }
+        }
+        Entries = entries;
+
+        Console.WriteLine($"Journal loaded from file named: {fileName}");
+    }
 }
