@@ -1,4 +1,5 @@
-
+using System;
+using System.Collections.Generic;
 public class Reference 
 {
     private string _book;
@@ -18,5 +19,17 @@ public class Reference
         _chapter = chapter;
         _firstVerse = firstVerse;
         _secondVerse = secondVerse;
+    }
+
+    public string GetFormattedReference()
+    {
+        if (_firstVerse == _secondVerse)
+        {
+            return $"{_book} {_chapter}:{_firstVerse}";
+        }
+        else
+        {
+            return $"{_book} {_chapter}:{_firstVerse}-{_secondVerse}";
+        }
     }
 }
