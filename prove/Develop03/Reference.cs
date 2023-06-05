@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+// Represents the reference of a scripture (e.g., "John 3:16")
 public class Reference 
 {
     private string _book;
@@ -20,10 +21,10 @@ public class Reference
         _firstVerse = firstVerse;
         _secondVerse = secondVerse;
     }
-
+    // Gets the formatted reference string
     public string GetFormattedReference()
     {
-        if (_firstVerse == _secondVerse)
+        if (_secondVerse == 0)
         {
             return $"{_book} {_chapter}:{_firstVerse}";
         }
