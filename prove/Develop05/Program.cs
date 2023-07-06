@@ -1,9 +1,11 @@
 using System;
-
-class Program
+using System.Collections.Generic;
+using System.IO;
+public class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        GoalManager manager = new GoalManager();
+        manager.ShowMenu();
     }
 }

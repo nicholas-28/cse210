@@ -1,0 +1,4 @@
+270
+SimpleGoal,cry,cry every night,30,True
+EternalGoal,be a better programmer,code more and more,100
+ChecklistGoal,sleep,sleep more,20,100,2,0,True

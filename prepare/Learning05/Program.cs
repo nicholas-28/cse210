@@ -6,14 +6,14 @@ class Program
     {
         List<Shape> shapes = new List<Shape>();
 
-        Square sq = new Square("Green", 4);
+        /*Square sq = new Square("Green", 4);
         shapes.Add(sq);
 
         Rectangle rc = new Rectangle("Blue", 3, 7);
         shapes.Add(rc);
 
         Circle cr = new Circle("White", 4);
-        shapes.Add(cr);
+        shapes.Add(cr);*/
 
         foreach (Shape sh in shapes)
         {
